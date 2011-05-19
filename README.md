@@ -33,33 +33,35 @@ else.
 
 ### Usage
 
-  # Schema: users(:password_hash => String, :bollocks => String,
-  #   :fancy_pants => String)
-  class User < ActiveRecord::Base
-    securely_hashes :password, :to => :password_hash
-    securely_hashes :bollocks
-    
-    class AlternateCoder
-      def self.dump some_value
-        # ...
-      end
-      
-      def self.load encoded
-        # ...
-      end
-    end
-    
-    securely_hashes :fancy_pants, :with => AlternateCoder
-  end
+Here's an example of how you might use this gem:
 
-  some_user = User.new
-  some_user.password    = 'super secret'
-  some_user.bollocks    = 'something else to hash'
-  some_user.fancy_pants = 'you get the idea'
-  some_user.save
-  some_user.reload
-  some_user.password_hash # => $2a$10blahetcetc...
-  some_user.bollocks      # => $2a$10yaddayadda...
+    # Schema: users(:password_hash => String, :bollocks => String,
+    #   :fancy_pants => String)
+    class User < ActiveRecord::Base
+      securely_hashes :password, :to => :password_hash
+      securely_hashes :bollocks
+    
+      class AlternateCoder
+        def self.dump some_value
+          # ...
+        end
+      
+        def self.load encoded
+          # ...
+        end
+      end
+    
+      securely_hashes :fancy_pants, :with => AlternateCoder
+    end
+
+    some_user = User.new
+    some_user.password    = 'super secret'
+    some_user.bollocks    = 'something else to hash'
+    some_user.fancy_pants = 'you get the idea'
+    some_user.save
+    some_user.reload
+    some_user.password_hash # => $2a$10blahetcetc...
+    some_user.bollocks      # => $2a$10yaddayadda...
 
 When using the `:to => <column name>` option, the gem will create getters and
 setters for the given attribute name and the setter will pass the value on
