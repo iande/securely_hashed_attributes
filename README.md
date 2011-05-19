@@ -76,8 +76,20 @@ used, no methods are created.
 
 ### Installing
 
-Right now, you probably shouldn't install this.  When I finish YARDing this
-fella up, I'll update this with real instructions.
+You can use this gem in your rails app by adding
+
+    gem 'securely_hashed_attributes'
+    
+to your `Gemfile`.  Alternatively, you can install the gem directly:
+
+    gem install securely_hashed_attributes
+    
+or you can clone the git repo:
+
+    git clone git://github.com/iande/securely_hashed_attributes.git
+
+I want to re-iterate that this gem was written mostly as a proof of concept,
+and you **must** be running Rails **3.1+** to use it.
 
 ### Further Thoughts
 
@@ -89,3 +101,16 @@ provides opportunities for leveraging features of your database of choice, as
 Aaron Patterson demonstrated with his HStore coder at RailsConf 2011.
 Although, you may not want to use `eval` to decode the data.
 
+
+### License
+
+Public Domained!
+
+### Contributing
+
+I'm pretty open to pull requests, if anyone finds utility in this gem and
+wants to contribute additional features.  All I ask is that you provide
+adequate documentation and test coverage for any code you contribute.  If you
+find the "public domaining" of this code to be problematic, fork the code
+and put it under whatever license you like.  You're free to do with this code
+pretty much whatever you like.

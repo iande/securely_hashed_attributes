@@ -1,3 +1,4 @@
+# The namespace for the serialize coders we'll provide.
 module SecurelyHashedAttributes::Coders
 end
 
