@@ -19,7 +19,8 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
   s.add_development_dependency 'rails', '~> 3.1.0.beta1'
-  s.add_development_dependency 'rspec'
-  s.add_development_dependency 'with_model'
-  s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'rspec', '~> 2.6.0'
+  s.add_development_dependency 'with_model', '~> 0.1.5'
+  s.add_development_dependency 'sqlite3', '~> 1.3.3'
+  s.add_development_dependency 'simplecov', '~> 0.4.2'
 end
