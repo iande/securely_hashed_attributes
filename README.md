@@ -74,6 +74,11 @@ This behavior is important to note because it can clobber (or be clobbered) by
 methods explicitly defined on the model. If the `:to => ...` option is not
 used, no methods are created.
 
+### Installing
+
+Right now, you probably shouldn't install this.  When I finish YARDing this
+fella up, I'll update this with real instructions.
+
 ### Further Thoughts
 
 Hopefully this gem serves its purpose of demonstrating how easy it is to do
