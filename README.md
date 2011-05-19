@@ -8,3 +8,4 @@ first?
 
 Blah blah, etc, etc.  I'll write more when there's more to write about.
 
+There's nothing to see here right now, come back later.
