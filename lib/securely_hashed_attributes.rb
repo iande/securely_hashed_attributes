@@ -1,0 +1,3 @@
+module SecurelyHashedAttributes
+  # Your code goes here...
+end
